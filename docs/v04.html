@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> Srikanth: 7-segment display driver </title>
+    <style>
+        .standardTable {
+            border: solid;
+            border-collapse: collapse;
+        }
+        .blackbox{
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            background-color: black;
+            border: solid;
+            border-color: white;
+            color: yellow;
+        }
+        </style>
+    <script>
+        function display(number) {
+            document.getElementById("decimal_input").innerHTML = number;
+        }        
+    </script>
+    </head>
+    <body>
+        <table class="standardTable">
+            <tr>
+                <td class="blackbox">
+                    <h3>Keypad</h3>
+                    <button type="button" onclick="display(1)">1</button>
+                    <button type="button" onclick="display(2)">2</button>
+                    <button type="button" onclick="display(3)">3</button>
+                    <button type="button" onclick="display(4)">4</button>
+                    <button type="button" onclick="display(5)">5</button>
+                    <button type="button" onclick="display(6)">6</button>
+                    <button type="button" onclick="display(7)">7</button>
+                    <button type="button" onclick="display(8)">8</button>
+                    <button type="button" onclick="display(9)">9</button>
+                    <button type="button" onclick="display(0)">0</button>
+                </td>
+                <td class="blackbox">
+                    <h3>Decimal input to binary number</h3>
+                    <p id="decimal_input">#</p>
+                </td>
+                <td class="blackbox">Binary number to a signal specifying which segments to light up</td>
+                <td class="blackbox">Light up the specified segments</td>
+            </tr>
+        </table>
+    </body>
+</html>
